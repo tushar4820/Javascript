@@ -1,0 +1,28 @@
+const NFTs = [];
+
+function mintNFTs(_name, _state, _country, _language) {
+    const NFT = {
+        "name": _name,
+        "eyecolor": _state,
+        "shirttype": _country,
+        "bling": _language
+    }
+    NFTs.push(NFT); // Push the NFT object to the NFTs array
+    console.log("Minted:" + _name);
+}
+
+function listNFTs() {
+    for (let i = 0; i < NFTs.length; i++) {
+        console.log(NFTs[i]);
+        
+    }
+}
+
+function getTotalSupply() {
+    console.log(NFTs.length);
+}
+
+// Mint an NFT and test the functions
+mintNFTs("Tushar", "Chandigarh", "India", "English");
+listNFTs();
+getTotalSupply();
